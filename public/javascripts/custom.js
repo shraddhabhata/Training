@@ -1,8 +1,8 @@
 function checkAnswer(value) {
-  var evalValue = typeof eval(value),
+  var type = typeof eval(value),
       correct   = false;
 
-  switch (evalValue) {
+  switch (type) {
     case 'function':
     case 'object':
       break;
