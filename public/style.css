@@ -10,7 +10,7 @@ button { cursor: pointer; }
 .form.show { opacity: 1; transition: opacity 1s; }
 .form-title { margin-left: 20px; }
 .form-list {}
-.form-item { overflow:hidden; padding: 20px; border-top: 1px solid #ddd; }
+.form-item { overflow:hidden; padding: 18px; border-top: 1px solid #ddd; }
 .form-item:nth-of-type(odd) { background-color: #f9f9f9; }
 .form-question { min-width: 340px; display: block; color: coral; }
 .form-answers { margin-top: 10px; }
