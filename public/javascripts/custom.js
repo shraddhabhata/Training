@@ -22,3 +22,23 @@ function checkAnswer(value) {
 function calculateScore(correctAnswersParam, totalAnswersParam) {
    return Math.round(correctAnswersParam / totalAnswersParam * 100);
 }
+
+var myObj = Object.create(Object, (function() {
+    var arrayValues = [];
+    
+    return {
+        myProp: {
+            get: function() {
+                console.log(arrayValues);
+                return arrayValues; 
+            },
+            set: function(x) {
+                if (!isNaN(x) && isFinite(x) && (x > arrayValues[arrayValues.length - 1]) || arrayValues.length === 0) {
+                   if (typeof x == 'number') { arrayValues.push(x); } 
+                }
+            },
+        }
+    }
+})());
+
+Object.seal(myObj);

@@ -12,4 +12,29 @@ describe("custom.js", function() {
     expect(checkAnswer("[]")).toBe(false);
   });
 
+
+  it('expects to set value > current value', function() {
+    myObj.myProp = 2;
+    expect(myObj.myProp[0]).toBe(2);
+  });
+
+  it('expects a number', function() {
+    myObj.myProp = '4';
+    expect(myObj.myProp[0]).toBe(2);
+  });
+
+  it('expects to not set value > current value', function() {
+    myObj.myProp= 1;
+    expect(myObj.myProp[0]).toBe(2);
+  });
+
+  it('expects to set value > current value', function() {
+    myObj.myProp = 5;
+    expect(myObj.myProp[1]).toBe(5);
+  });
+
+  it('expects to not set a new property', function() {
+    myObj.shraddha = 's';
+    expect(myObj.shraddha).toBe(undefined);
+  });
 });
