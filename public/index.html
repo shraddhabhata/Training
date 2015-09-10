@@ -1,0 +1,140 @@
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" />
+  
+</head>
+<body>
+<div>
+  <div class="start">  
+    <button id="start-button" class="start-button button" onclick="showForm()">Start Quiz</button>
+  </div>
+
+	<form id="form" class="form">
+<h2 class="form-title">Questions</h2>
+		<ul class="form-list">
+			<li class="form-item">
+				<span class="form-question">
+					Is basketball your favorite sport?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="'abc'" name="q1"> 'abc'
+					</label>
+					
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="alert" name="q1"> alert
+					</label>
+				</section>
+			</li>
+
+	    	<li class="form-item">
+				<span class="form-question">
+					Is it lunch time yet?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="new Number(123)" name="q2"> new Number(123)
+					</label>
+
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="null" name="q2"> null
+					</label>
+				</section>
+			</li>
+
+			<li class="form-item">
+				<span class="form-question">
+					Is it cold in here?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="true" name="q3"> true
+					</label>
+
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="new String('test')" name="q3"> new String('test')
+					</label>
+				</section>
+			</li>
+
+			<li class="form-item">
+				<span class="form-question">
+					Do donuts make you fat?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="new Boolean(true)" name="q4"> new Boolean(true)
+					</label>
+
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="alert" name="q4"> 789
+					</label>
+				</section>
+			</li>
+
+			<li class="form-item">
+				<span class="form-question">
+					Are the Miami Heat going to win a title this year?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="undefined" name="q5"> undefined
+					</label>
+
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="[4, 5, 6]" name="q5"> [4, 5, 6]
+					</label>
+				</section>
+			</li>
+
+			<li class="form-item">
+				<span class="form-question">
+					Will Donald Trump become president?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="[1, 2, 3]" name="q6"> [1, 2, 3]
+					</label>
+
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="Symbol.for('bagels') " name="q6"> Symbol.for('bagels') 
+					</label>
+				</section>
+			</li>
+
+			<li class="form-item">
+				<span class="form-question">
+					Is this table square?
+				</span>
+
+				<section class="form-answers">
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="true" name="q7"> true
+					</label>
+
+					<label class="form-answer">
+						<input class="form-input" type="radio" value="[]" name="q7"> []
+					</label>
+				</section>
+			</li>
+		</ul>
+
+    <footer class="form-footer">
+		      <button class="form-submit button" type="button" onclick="gradeQuiz();" />Grade Quiz</button>
+    
+      <button class="form-reset button" type="button" onclick="resetQuiz();">Reset</button>
+    </footer>
+	</form>
+  
+ 	<div id="result" class="result"></div>
+</div>
+  <script src="javascripts/custom.js"></script>
+
+</body>
+</html>
