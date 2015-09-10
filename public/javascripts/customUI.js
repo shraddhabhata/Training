@@ -4,7 +4,7 @@ var correctAnswers = 0,
     form = document.getElementById('form'),
     formElems = [].slice.call(document.getElementById('form').elements, 0, -2);
     startButton = document.getElementById('start-button'),
-   scoreDisplay = document.getElementById('result');*/
+   scoreDisplay = document.getElementById('result');
 
 function gradeQuiz() {
   correctAnswers = 0;
