@@ -1,30 +1,11 @@
 var correctAnswers = 0,
     totalAnswers   = 7,
-    finalScore     = 0,
-    form = null,
-    formElems = null,
-    startButton = null,
-   scoreDisplay = null;
-
-(function init() {
-    form = document.getElementById('form');
-    formElems = [].slice.call(document.getElementById('form').elements, 0, -2);
-    startButton = document.getElementById('start-button');
-   scoreDisplay = document.getElementById('result');
-})()
-
-function gradeQuiz() {
-  correctAnswers = 0;
+    finalScore     = 0;
   
-  formElems.forEach(function(el, i) {
-     if (el.checked) {
-       checkAnswer(el.value);
-     }
-  });
 
-  finalScore =  correctAnswers / totalAnswers * 100;
-
-    scoreDisplay.innerHTML = 'Your score is ' + Math.round(finalScore) + '%';
+function gradeQuizChild(correctParam, totalParam) {
+  finalScore =  correctParam / totalParam * 100;
+  return finalScore;
 }
 
 function checkAnswer(value) {
@@ -37,20 +18,6 @@ function checkAnswer(value) {
     default:  
       correctAnswers++;
   };
-  
+  console.log(correctAnswers);
   return correctAnswers;
-}
-
-function showForm() {
-  form.classList.add('show');
-  startButton.classList.add('hide');
-}
-
-function resetQuiz() {
-  form.classList.remove('show');
-  formElems.forEach(function(el) { el.checked = false; });
-  startButton.classList.remove('hide');
-  correctAnswers = 0;
-  document.body.scrollTop = 0;
-  scoreDisplay.innerHTML = '';
 }
