@@ -1,18 +1,15 @@
 describe("custom.js", function() {
 
-  it('expects the initial values for variables to be avaiable', function() {
-  	expect(correctAnswers).toBe(0);
-    expect(totalAnswers).toBe(7);
-    expect(finalScore).toBe(0);
+  it('expects calculateScore() to return a proper grade', function() {
+  	expect(calculateScore(5, 10)).toBe(50);
   });
   
   it('expects to return correct value of answers', function() {
-    expect(checkAnswer("'abc'")).toBe(1);
-    expect(checkAnswer("new function() {}")).toBe(1);
+    expect(checkAnswer("'abc'")).toBe(true);
+    expect(checkAnswer("new Date()")).toBe(false);
+    expect(checkAnswer("new function() {}")).toBe(false);
+    expect(checkAnswer("Math.round")).toBe(false);
+    expect(checkAnswer("[]")).toBe(false);
   });
-    
-  it('should grade quiz', function() {
-      expect(gradeQuizChild(4, 7)).toBeGreaterThan(57);
-  });
-   
+
 });
