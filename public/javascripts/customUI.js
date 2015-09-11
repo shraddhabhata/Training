@@ -36,7 +36,7 @@ function resetQuiz() {
 }
 function makeRequest(responseText) {
     console.log('as');
-    document.getElementById("myDiv1").innerHTML = responseText;
+    document.getElementById("myDiv").innerHTML = responseText;
     console.log(responseText);
  }
 
