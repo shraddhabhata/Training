@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ngmy">
 <head>
 	<link href="style.css" rel="stylesheet" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="/javascripts/ajax.js"></script>
 </head>
-<body>
+<body ng-controller="MainCtrl">
 <div>
   <div class="start">  
     <button id="start-button" class="start-button button" onclick="showForm()">Start Quiz</button>
@@ -11,6 +13,8 @@
 
 	<form id="form" class="form">
 <h2 class="form-title">Questions</h2>
+<div id="myDiv"></div>
+<div id="myDiv1"></div>
 <div id="result" class="result"></div>
 		<ul class="form-list">
 			<li class="form-item">

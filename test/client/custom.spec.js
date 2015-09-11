@@ -37,4 +37,20 @@ describe("custom.js", function() {
     myObj.shraddha = 's';
     expect(myObj.shraddha).toBe(undefined);
   });
+
+  it('expects to function to return response', function() {
+    // expect(cb('Help us')).toContain("Help");
+  });
+
+   it('expects function to call callback cb', function(done) {
+    function handleResponse(resText) {
+      console.log("Hi");
+      console.log(resText);
+      expect(resText).toContain('user');
+      done();
+    }
+    // done();
+
+    myFunc(handleResponse);
+  });
 });

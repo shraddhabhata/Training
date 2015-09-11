@@ -34,3 +34,10 @@ function resetQuiz() {
   document.body.scrollTop = 0;
   scoreDisplay.innerHTML = '';
 }
+function makeRequest(responseText) {
+    console.log('as');
+    document.getElementById("myDiv1").innerHTML = responseText;
+    console.log(responseText);
+ }
+
+myFunc(makeRequest);

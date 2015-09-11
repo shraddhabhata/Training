@@ -42,3 +42,31 @@ var myObj = Object.create(Object, (function() {
 })());
 
 Object.seal(myObj);
+
+/*function makeRequest()
+{
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+    if(xmlHttp.readyState === XMLHttpRequest.DONE) {
+      if(xmlHttp.status == 200) {
+        document.getElementById('myDiv').innerHTML = xmlHttp.responseText;
+      }
+    }
+    xmlHttp.open("GET", "http://www.google.com", true);
+    xmlHttp.send();
+  }*/
+
+
+function myFunc(cb) {    
+      var oRequest = new XMLHttpRequest();
+      oRequest.addEventListener('load', function() {
+        console.log('loaded!');
+        cb(oRequest.responseText);        
+      });
+      //cb(d);
+      oRequest.open('GET', 'http://httpbin.org/user-agent');
+      oRequest.send();
+      console.log("request sent");
+      return myFunc;
+};
+
